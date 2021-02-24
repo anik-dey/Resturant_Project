@@ -781,7 +781,8 @@
       </div>
 
       <div data-aos="fade-up">
-        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1309.67780125278!2d90.4117647501582!3d23.775177180871005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x183bd9128fb6f654!2sOxdora%20I%20Tech!5e0!3m2!1sen!2sbd!4v1612077860747!5m2!1sen!2sbd" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        {{-- <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!4m5!3m4!1s0x3755c62fb95f16c1:0xb333248370356dee!8m2!3d23.8134905!4d90.4241565" frameborder="0" allowfullscreen></iframe> --}}
       </div>
 
       <div class="container" data-aos="fade-up">
@@ -793,7 +794,7 @@
               <div class="address">
                 <i class="icofont-google-map"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Road Number 11, Khilkhet, Dhaka</p>
               </div>
 
               <div class="open-hours">
@@ -808,13 +809,13 @@
               <div class="email">
                 <i class="icofont-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>anikdey975197@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="icofont-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>017-7291-688</p>
               </div>
 
             </div>
@@ -822,8 +823,10 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
+            
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="/contract" method="post" role="form" class="php-email-form">
+              @csrf
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -842,14 +845,14 @@
                 <textarea class="form-control" name="message" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="mb-3">
+              {{-- <div class="mb-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
+              </div> --}}
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-
+           
           </div>
 
         </div>
