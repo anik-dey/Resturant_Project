@@ -1795,3 +1795,10 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+/* CUSTOM */
+
+.img-fluid{
+  height: 300px;
+  width: 400px;
+}

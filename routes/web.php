@@ -16,9 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layout');
 });
+// Resturant Home page
+Route::get('/anik-resturant', 'Base@show')->name('anik');
 
+//Dashboard
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::post('contract','Contract@store');
+//Contract Us
+Route::post('contract', 'Contract@store');
+
+//Gallery 
+Route::get('dashboard/add-gallery', 'Gallery@show')->name('add-gallery');
+Route::post('/save-gallery', 'Gallery@store');
