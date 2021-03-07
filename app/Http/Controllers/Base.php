@@ -16,6 +16,9 @@ class Base extends Controller
     public function show()
     {
         $gallery = DB::table('gallery_tbl')->get();
-        return view('layout', compact('gallery', 'gallery'));
+        $chef = DB::table('chef_tbl')->get();
+
+
+        return view('layout', compact('gallery', 'chef'));
     }
 }

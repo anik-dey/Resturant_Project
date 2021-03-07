@@ -701,7 +701,8 @@
 
                         <div class="col-lg-3 col-md-4">
                             <div class="gallery-item">
-                                <a href="assets/img/gallery/gallery-1.jpg" class="venobox" data-gall="gallery-item">
+                                <a href="{{ URL::to($item->gallery_images) }}" class="venobox"
+                                    data-gall="gallery-item">
                                     <img src="{{ URL::to($item->gallery_images) }}" alt="" class="img-fluid">
                                 </a>
                             </div>
@@ -778,26 +779,27 @@
                 </div>
 
                 <div class="row">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
-                            <div class="member-info">
-                                <div class="member-info-content">
-                                    <h4>Walter White</h4>
-                                    <span>Master Chef</span>
-                                </div>
-                                <div class="social">
-                                    <a href=""><i class="icofont-twitter"></i></a>
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
-                                    <a href=""><i class="icofont-linkedin"></i></a>
+                    @foreach ($chef as $item)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                                <img src="{{ URL::to($item->chef_images) }}" class="img-fluid" alt="">
+                                <div class="member-info">
+                                    <div class="member-info-content">
+                                        <h4>Walter White</h4>
+                                        <span>Master Chef</span>
+                                    </div>
+                                    <div class="social">
+                                        <a href=""><i class="icofont-twitter"></i></a>
+                                        <a href=""><i class="icofont-facebook"></i></a>
+                                        <a href=""><i class="icofont-instagram"></i></a>
+                                        <a href=""><i class="icofont-linkedin"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
 
-                    <div class="col-lg-4 col-md-6">
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="member" data-aos="zoom-in" data-aos-delay="200">
                             <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
                             <div class="member-info">
@@ -813,9 +815,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    <div class="col-lg-4 col-md-6">
+                    {{-- <div class="col-lg-4 col-md-6">
                         <div class="member" data-aos="zoom-in" data-aos-delay="300">
                             <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
                             <div class="member-info">
@@ -831,7 +833,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
 

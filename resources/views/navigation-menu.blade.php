@@ -25,6 +25,28 @@
 
                     </x-jet-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('remove-gallery') }}"
+                        :active="request()->routeIs('remove-gallery')">
+                        {{ __('Remove Gallery Images') }}
+
+
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('add-chef') }}" :active="request()->routeIs('add-chef')">
+                        {{ __('Add Chefs') }}
+
+
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('remove-chef') }}" :active="request()->routeIs('remove-chef')">
+                        {{ __('Remove Chef Images') }}
+
+
+                    </x-jet-nav-link>
+                </div>
 
             </div>
 
