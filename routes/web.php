@@ -38,3 +38,7 @@ Route::get('dashboard/add-chef', 'Chef@show')->name('add-chef');
 Route::post('/save-chef', 'Chef@store');
 Route::get('dashboard/remove-chef', 'chef@view')->name('remove-chef');
 Route::get('/chefimage-delete/{chef_id}', 'chef@delete');
+
+//Menu
+Route::get('dashboard/add-menu', 'Menu@show')->name('add-menu');
+Route::post('/save-menu', 'Menu@store');
