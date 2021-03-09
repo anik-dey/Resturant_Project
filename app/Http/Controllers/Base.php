@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 
 
 
+
 Session_start();
 
 class Base extends Controller
@@ -17,8 +18,18 @@ class Base extends Controller
     {
         $gallery = DB::table('gallery_tbl')->get();
         $chef = DB::table('chef_tbl')->get();
+        $menu = DB::table('menu_tbl')->get();
+        $stage = 0;
+        //$realArray = (array)$menu;
 
 
-        return view('layout', compact('gallery', 'chef'));
+
+
+
+
+
+
+
+        return view('layout', compact('gallery', 'chef', 'menu', 'stage'));
     }
 }
