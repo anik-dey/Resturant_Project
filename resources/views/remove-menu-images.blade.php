@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
 
-            {{ __('Remove Chef Images What You Want') }}
+            {{ __('Remove Menu Item') }}
 
         </h2>
     </x-slot>
@@ -11,15 +11,20 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 {{-- <x-jet-welcome /> --}}
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Id.."
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Name"
                     title="Type in a name">
 
-                <table id="myTable">
+                <table border="1" id="myTable">
                     <thead>
                         <tr class="header">
-                            <th style="width:13%;">ID</th>
+                            <th style="width:13%;">Item Image</th>
 
-                            <th style="width:20%;">Images</th>
+                            <th style="width:20%;">Item Name</th>
+                            <th style="width:20%;">Item Quality</th>
+                            <th style="width:20%;">Item Price</th>
+                            <th style="width:20%;">Item Description</th>
+
+
                             <th style="width:20%;">Action</th>
 
 
@@ -28,16 +33,22 @@
                     <tbody>
                         @foreach ($image as $item)
                             <tr align="center">
+                                <td><img src="{{ URL::to($item->iteam_image) }}"></td>
+                                <td>{{ $item->iteam_name }}</td>
+                                <td>{{ $item->iteam_quality }}</td>
+                                <td>{{ $item->iteam_price }}</td>
+                                <td>{{ $item->iteam_description }}</td>
 
-                                <td style="text-align: center">{{ $item->chef_id }} </td>
 
-                                <td><img src="{{ URL::to($item->chef_images) }}"></td>
+
 
 
                                 <td style="text-align: center;">
+                                    <a href="{{ URL::to('/menu-edit/' . $item->iteam_id) }}"><button
+                                            class="button button1">Edit</button><a>
 
-                                    <a href="{{ URL::to('/chefimage-delete/' . $item->chef_id) }}"><button
-                                            class="button button2">Delete</button></a>
+                                            <a href="{{ URL::to('/menu-delete/' . $item->iteam_id) }}"><button
+                                                    class="button button2">Delete</button></a>
 
                                 </td>
                             </tr>
@@ -54,7 +65,7 @@
                         table = document.getElementById("myTable");
                         tr = table.getElementsByTagName("tr");
                         for (i = 0; i < tr.length; i++) {
-                            td = tr[i].getElementsByTagName("td")[0];
+                            td = tr[i].getElementsByTagName("td")[1];
                             if (td) {
                                 txtValue = td.textContent || td.innerText;
                                 if (txtValue.toUpperCase().indexOf(filter) > -1) {

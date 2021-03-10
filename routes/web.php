@@ -42,3 +42,6 @@ Route::get('/chefimage-delete/{chef_id}', 'chef@delete');
 //Menu
 Route::get('dashboard/add-menu', 'Menu@show')->name('add-menu');
 Route::post('/save-menu', 'Menu@store');
+Route::get('dashboard/remove-menu', 'Menu@view')->name('remove-menu');
+Route::get('/menu-delete/{iteam_id}', 'Menu@delete');
+Route::get('/menu-edit/{iteam_id}', 'Menu@edit')->name('edit-menu');

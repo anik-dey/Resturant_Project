@@ -27,7 +27,7 @@
                     </thead>
                     <tbody>
                         @foreach ($image as $item)
-                            <tr>
+                            <tr align="center">
 
                                 <td style="text-align: center">{{ $item->gallery_id }} </td>
 

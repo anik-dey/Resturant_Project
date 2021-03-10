@@ -58,4 +58,27 @@ class Menu extends Controller
         // Session::put('exception', 'Student Added Successfully !!');
         // return Redirect::to('/addstudent');
     }
+    public function view()
+    {
+        $image = DB::table('menu_tbl')->get();
+        return view('remove-menu-images', compact('image', 'image'));
+    }
+
+    public function delete($iteam_id)
+    {
+        DB::table('menu_tbl')
+            ->where('iteam_id', $iteam_id)
+            ->delete();
+        return Redirect::to('dashboard/remove-menu');
+    }
+
+    public function edit($iteam_id)
+    {
+        $iteam_view = DB::table('menu_tbl')
+            ->select('*')
+            ->where('iteam_id', $iteam_id)
+            ->first();
+        //dd($iteam_view);
+        return view('menu-edit', compact('iteam_view', 'iteam_view'));
+    }
 }
