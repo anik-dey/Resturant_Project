@@ -18,8 +18,10 @@
                     Session::put('exception', null);
                     }
                     ?>
-                <form action="{{ url('/save-menu') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('/update-menu', $iteam_view->iteam_id) }}" method="post"
+                    enctype="multipart/form-data">
                     {{ csrf_field() }}
+                    @php echo $iteam_view->iteam_name; @endphp
                     <div class="container container_own">
 
                         <h1 align="center">Please fill in this form to Edit Menu.</h1></br>
@@ -30,7 +32,7 @@
                                 <td>Iteam Name</td>
 
                                 <td></td>
-                                <td><input type="text" value={{ $iteam_view->iteam_name }} name="iteam_name" required>
+                                <td><input type="text" value={{ $iteam_view->iteam_name }} name="iteam_name"></td>
                                 </td>
                             </tr>
                             <tr>
@@ -59,8 +61,7 @@
                             <tr>
                                 <td>Image</td>
                                 <td></td>
-                                <td><input type="file" name="iteam_image" value="{{ $iteam_view->iteam_image }}"
-                                        required>
+                                <td><input type="file" name="iteam_image">
                                 </td>
                             </tr>
 

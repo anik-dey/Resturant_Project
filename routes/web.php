@@ -45,3 +45,4 @@ Route::post('/save-menu', 'Menu@store');
 Route::get('dashboard/remove-menu', 'Menu@view')->name('remove-menu');
 Route::get('/menu-delete/{iteam_id}', 'Menu@delete');
 Route::get('/menu-edit/{iteam_id}', 'Menu@edit')->name('edit-menu');
+Route::post('/update-menu/{iteam_id}', 'Menu@update');

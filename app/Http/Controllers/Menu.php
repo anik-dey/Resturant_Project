@@ -81,4 +81,24 @@ class Menu extends Controller
         //dd($iteam_view);
         return view('menu-edit', compact('iteam_view', 'iteam_view'));
     }
+
+    public function update(Request $request, $iteam_id)
+    {
+        $data = array();
+
+        $data['iteam_name'] = $request->iteam_name;
+        $data['iteam_price'] = $request->iteam_price;
+        $data['iteam_quality'] = $request->iteam_quality;
+        $data['iteam_description'] = $request->iteam_description;
+
+        dd($data);
+
+        // $data['student_email'] = $request->student_email;
+
+        // DB::table('student_tbl')
+        //     ->where('student_id', $student_id)
+        //     ->update($data);
+        // Session::put('exception', 'Update Student Information Successfully !!');
+        // return Redirect::to('/allstudent');
+    }
 }
