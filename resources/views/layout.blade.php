@@ -224,7 +224,7 @@
                     </div>
                 </div>
 
-                {{-- <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
                     @foreach ($menu as $item)
                         <div class="col-lg-6 menu-item filter-starters">
                             @if ($item->iteam_quality == 'Starters')
@@ -266,7 +266,7 @@
 
 
                     @endforeach
-                </div> --}}
+                </div>
 
             </div>
         </section><!-- End Menu Section -->

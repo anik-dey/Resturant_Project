@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+// Route::get('/', function () {
+//     return view('layout');
+// });
 // Resturant Home page
-Route::get('/anik-resturant', 'Base@show')->name('anik');
+Route::get('/', 'Base@show')->name('anik');
 
 //Dashboard
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -27,7 +27,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //Contract Us
 Route::post('contract', 'Contract@store');
 
-//Gallery 
+//Gallery
 Route::get('dashboard/add-gallery', 'Gallery@show')->name('add-gallery');
 Route::post('/save-gallery', 'Gallery@store');
 Route::get('dashboard/remove-gallery', 'Gallery@view')->name('remove-gallery');
