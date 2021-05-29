@@ -224,7 +224,7 @@
                     </div>
                 </div>
 
-                <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+                {{-- <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
                     @foreach ($menu as $item)
                         <div class="col-lg-6 menu-item filter-starters">
                             @if ($item->iteam_quality == 'Starters')
@@ -239,7 +239,7 @@
                         </div>
 
 
-                        {{-- <div class="col-lg-6 menu-item filter-specialty">
+                        <div class="col-lg-6 menu-item filter-specialty">
                             @if ($item->iteam_quality == 'Specialty')
                                 <img src="{{ URL::to($item->iteam_image) }}" class="menu-img" alt="">
                                 <div class="menu-content">
@@ -249,7 +249,7 @@
                                     {{ $item->iteam_description }}
                                 </div>
                             @endif
-                        </div> --}}
+                        </div>
 
                         <div class="col-lg-6 menu-item filter-salads">
                             @if ($item->iteam_quality == 'Salad')
@@ -266,7 +266,7 @@
 
 
                     @endforeach
-                </div>
+                </div> --}}
 
             </div>
         </section><!-- End Menu Section -->
