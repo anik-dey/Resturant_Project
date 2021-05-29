@@ -224,11 +224,11 @@
                     </div>
                 </div>
 
-                <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+                {{-- <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
                     @foreach ($menu as $item)
                         <div class="col-lg-6 menu-item filter-starters">
                             @if ($item->iteam_quality == 'Starters')
-                                {{-- <img src="{{ URL::to($item->iteam_image) }}" class="menu-img" alt=""> --}}
+                                <img src="{{ URL::to($item->iteam_image) }}" class="menu-img" alt="">
                                 <div class="menu-content">
                                     <a href="#">{{ $item->iteam_name }}</a><span>{{ $item->iteam_price }}</span>
                                 </div>
@@ -241,7 +241,7 @@
 
                         <div class="col-lg-6 menu-item filter-specialty">
                             @if ($item->iteam_quality == 'Specialty')
-                                {{-- <img src="{{ URL::to($item->iteam_image) }}" class="menu-img" alt=""> --}}
+                                <img src="{{ URL::to($item->iteam_image) }}" class="menu-img" alt="">
                                 <div class="menu-content">
                                     <a href="#">{{ $item->iteam_name }}</a><span>{{ $item->iteam_price }}</span>
                                 </div>
@@ -253,7 +253,7 @@
 
                         <div class="col-lg-6 menu-item filter-salads">
                             @if ($item->iteam_quality == 'Salad')
-                                {{-- <img src="{{ URL::to($item->iteam_image) }}" class="menu-img" alt=""> --}}
+                                <img src="{{ URL::to($item->iteam_image) }}" class="menu-img" alt="">
                                 <div class="menu-content">
                                     <a href="#">{{ $item->iteam_name }}</a><span>{{ $item->iteam_price }}</span>
                                 </div>
@@ -266,7 +266,7 @@
 
 
                     @endforeach
-                </div>
+                </div> --}}
 
             </div>
         </section><!-- End Menu Section -->
