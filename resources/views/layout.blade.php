@@ -674,7 +674,7 @@
                 </div>
 
                 <div class="row">
-                    @foreach ($chef as $item)
+                    {{-- @foreach ($chef as $item)
                         <div class="col-lg-4 col-md-6">
                             <div class="member" data-aos="zoom-in" data-aos-delay="100">
                                 <img src="{{ URL::to($item->chef_images) }}" class="img-fluid" alt="">
@@ -692,7 +692,7 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @endforeach --}}
 
 
 
