@@ -60,7 +60,7 @@ class Menu extends Controller
     }
     public function view()
     {
-        $image = DB::table('menu_tbl')->get();
+        $image = DB::table('menu_tbl')->latest()->get();
         return view('remove-menu-images', compact('image', 'image'));
     }
 

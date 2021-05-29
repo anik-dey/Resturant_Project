@@ -13,6 +13,9 @@
                 {{-- <x-jet-welcome /> --}}
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Name"
                     title="Type in a name">
+                <input type="text" id="myInputt" onkeyup="myFunctionn()" placeholder="Search by Name"
+                    title="Type in a name">
+
 
                 <table border="1" id="myTable">
                     <thead>
@@ -66,6 +69,29 @@
                         tr = table.getElementsByTagName("tr");
                         for (i = 0; i < tr.length; i++) {
                             td = tr[i].getElementsByTagName("td")[1];
+
+                            if (td) {
+                                txtValue = td.textContent || td.innerText;
+                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                    tr[i].style.display = "";
+                                } else {
+                                    tr[i].style.display = "none";
+                                }
+                            }
+                        }
+                    }
+
+                    function myFunctionn() {
+                        var input, filter, table, tr, td, i, txtValue;
+                        input = document.getElementById("myInputt");
+                        filter = input.value.toUpperCase();
+                        table = document.getElementById("myTable");
+                        //table = document.getElement("txtValue");
+                        //tr = table.getElementsByTagName("tr");
+                        tr = table.getElementsByTagName("tr");
+                        for (i = 0; i < tr.length; i++) {
+                            td = tr[i].getElementsByTagName("td")[2];
+
                             if (td) {
                                 txtValue = td.textContent || td.innerText;
                                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
